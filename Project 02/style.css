@@ -1,0 +1,16 @@
+.intro {
+  width: 20%;
+  height: 12vh;
+  background-color: rgb(253, 56, 56);
+  color: white;
+  border-radius: 0.2rem;
+}
+.intro h1 {
+  padding: 10px;
+}
+.intro p {
+  padding: 10px;
+  text-align: end;
+  position: relative;
+  top: -3rem;
+}
