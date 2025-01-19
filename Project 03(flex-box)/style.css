@@ -3,17 +3,22 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  line-height: 2rem;
 }
 
 .section {
-  min-height: 100vh;
+  height: 100vh;
+  /* height: 300px; */
   background-color: rgb(16, 104, 187);
   display: flex;
   color: white;
+  gap: 10px;
 }
 
 /* Left Navigation Section */
 .left-nav {
+  height: 100%;
+  overflow-y: auto;
   flex: 0.33;
   background-color: rgba(17, 117, 248, 0.637);
   display: flex;
@@ -21,6 +26,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/* ::-webkit-scrollbar {
+  width: 5px;
+} */
 
 .left-logo {
   height: 250px;
@@ -91,8 +100,229 @@
   margin: 0.8rem;
 }
 
+/* Common Code */
+.half-line {
+  border-top: 3px solid white;
+  width: 500px;
+}
+.full-line-intro {
+  border-top: 2px solid rgba(255, 255, 255, 0.11);
+  width: 100%;
+}
+
+.full-line {
+  border-top: 3px solid rgba(255, 255, 255, 0.39);
+  width: 100%;
+  margin: 60px 0;
+}
+
+.readmore-btn {
+  padding: 6px 20px;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
 /* Main Content Section*/
+
 .main-content {
+  overflow-y: auto;
   flex: 1;
   background-color: rgba(73, 145, 240, 0.911);
+}
+
+.container {
+  max-width: 800px;
+  min-height: 100vh;
+  background-color: rgb(160, 110, 49);
+  margin: 0 auto;
+}
+
+.intro-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.intro-img-container img {
+  width: 100%;
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mountain-img-container {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 2rem;
+}
+.montaine-img-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.mountain-img-container img,
+.girl-nature-intro-cont img {
+  width: 230px;
+  border-radius: 8px;
+}
+
+.girl-nature-intro-cont {
+  display: flex;
+  gap: 2rem;
+}
+
+.girl-nature-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.intro-img-container3 button {
+  margin-left: 16.5rem;
+}
+
+/* Feature Section */
+
+.features-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 16px;
+}
+.feature-list-box {
+  width: 49%;
+  padding: 60px;
+  background-color: rgba(17, 117, 248, 0.445);
+}
+.feature-icon i {
+  font-size: 100px;
+}
+
+/* Gallery Section */
+
+.gallery-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.gallery-list {
+  height: 100vh;
+  display: grid;
+  gap: 22px 12px;
+  grid-template-areas:
+    "img1 img2 img3"
+    "img1 img4 img3"
+    "img5 img4 img6";
+}
+
+.gallery-img-con {
+  border-radius: 8px;
+}
+.img-detail {
+  background-color: white;
+  height: 80%;
+  width: 90%;
+  margin: auto;
+  margin-top: 10%;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease;
+  /* transform: rotateX(90deg); */
+}
+
+.girl-one {
+  background-image: url("./src/girl-nature.jpg");
+  grid-area: img1;
+}
+
+.lady {
+  background-image: url("./src/woman-chair-sunshine.jpg");
+  grid-area: img2;
+}
+.pretty-girl {
+  background-image: url("./src/woman-pretty.jpg");
+  grid-area: img3;
+}
+
+.escalator-up {
+  background-image: url("./src/escalator-blue.jpg");
+  grid-area: img4;
+}
+.her-feeling {
+  background-image: url("./src/woman-feeling.jpg");
+  grid-area: img5;
+}
+
+.bikini-girl {
+  background-image: url("./src/woman-bikini.jpg");
+  grid-area: img6;
+}
+
+.contact-sec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 100px;
+}
+
+form {
+  display: grid;
+  grid-template-areas:
+    "detail detail2"
+    "subject subject"
+    "message message";
+  gap: 25px;
+}
+
+input,
+textarea {
+  border: 1px solid white;
+  color: white;
+  padding: 9px 12px;
+  background-color: rgba(207, 145, 109, 0.185);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.678);
+}
+
+.det1 {
+  grid-area: detail;
+}
+.det12 {
+  grid-area: detail2;
+}
+.sub {
+  grid-area: subject;
+}
+.msg {
+  grid-area: message;
+}
+
+.form-btn button {
+  padding: 6px 20px;
+  position: relative;
+  left: 90%;
+  border: none;
+  border-radius: 3px;
 }
