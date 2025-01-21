@@ -15,6 +15,12 @@
   </head>
   <body>
     <div class="section">
+      <div class="menu-btns">
+        <div class="close-menu-cont">
+          <i class="fa fa-times close-menu"></i>
+        </div>
+        <i class="fa fa-bars show-menu"></i>
+      </div>
       <div class="left-nav">
         <div class="left-logo">
           <img src="src/logo-image.jpg" alt="logo" />
@@ -23,10 +29,10 @@
         </div>
         <div class="left-menu">
           <ul>
-            <li>Intro</li>
-            <li>Features</li>
-            <li>Gallery</li>
-            <li>Contact</li>
+            <li><a href="#intro-sec">Intro</a></li>
+            <li><a href="#features-sec">Features</a></li>
+            <li><a href="#gallery-sec">Gallery</a></li>
+            <li><a href="#contact-sec">Contact</a></li>
           </ul>
         </div>
         <div class="left-social">
@@ -43,7 +49,7 @@
       </div>
       <div class="main-content">
         <div class="container">
-          <div class="intro-sec">
+          <div class="intro-sec" id="intro-sec">
             <div class="intro-img-container">
               <img src="./src/aerobic-girls.jpg" alt="" />
             </div>
@@ -60,7 +66,7 @@
               </div>
 
               <div class="mountain-img-container">
-                <div class="montaine-img-intro">
+                <div class="montain-img-intro img-container">
                   <h2>Modern Web Design</h2>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -83,7 +89,7 @@
             <div class="full-line-intro"></div>
 
             <div class="intro-img-container3">
-              <div class="girl-nature-intro-cont">
+              <div class="girl-nature-intro-cont img-container">
                 <img src="./src/girl-nature.jpg" alt="" />
                 <div class="girl-nature-intro">
                   <h2>Best Template for you!</h2>
@@ -107,7 +113,7 @@
 
           <div class="full-line"></div>
 
-          <div class="features-sec">
+          <div class="features-sec" id="features-sec">
             <div class="feature-intro">
               <h1>Greatest Features</h1>
             </div>
@@ -164,7 +170,7 @@
 
           <div class="full-line"></div>
 
-          <div class="gallery-sec">
+          <div class="gallery-sec" id="gallery-sec">
             <div class="gallery-intro">
               <h1>Gallery</h1>
             </div>
@@ -218,7 +224,7 @@
 
           <div class="full-line"></div>
 
-          <div class="contact-sec">
+          <div class="contact-sec" id="contact-sec">
             <div class="contact-intro">
               <h1>Contact</h1>
             </div>
@@ -250,5 +256,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
