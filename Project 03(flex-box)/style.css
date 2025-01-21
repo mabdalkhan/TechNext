@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
   line-height: 2rem;
+  scroll-behavior: smooth;
 }
 
 .section {
@@ -12,7 +13,6 @@
   background-color: rgb(16, 104, 187);
   display: flex;
   color: white;
-  gap: 10px;
 }
 
 /* Left Navigation Section */
@@ -27,9 +27,13 @@
   justify-content: space-between;
 }
 
-/* ::-webkit-scrollbar {
-  width: 5px;
-} */
+.left-nav::-webkit-scrollbar {
+  width: 0;
+}
+.left-menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .left-logo {
   height: 250px;
@@ -68,6 +72,10 @@
   transition: 0.5s ease;
 }
 .left-menu ul li:hover {
+  background-color: white;
+  color: rgba(17, 117, 248, 0.637);
+}
+.left-menu ul li:active {
   background-color: white;
   color: rgba(17, 117, 248, 0.637);
 }
@@ -117,11 +125,18 @@
 }
 
 .readmore-btn {
+  color: rgba(17, 117, 248, 0.637);
   padding: 6px 20px;
   border: none;
   border-radius: 2px;
   font-weight: 700;
   margin-top: 20px;
+  transition: 0.7s ease;
+  cursor: pointer;
+}
+.readmore-btn:hover {
+  color: white;
+  background-color: rgba(17, 117, 248, 0.637);
 }
 
 /* Main Content Section*/
@@ -135,7 +150,7 @@
 .container {
   max-width: 800px;
   min-height: 100vh;
-  background-color: rgb(160, 110, 49);
+  /* background-color: rgb(160, 110, 49); */
   margin: 0 auto;
 }
 
@@ -202,7 +217,12 @@
 .feature-list-box {
   width: 49%;
   padding: 60px;
-  background-color: rgba(17, 117, 248, 0.445);
+  background-color: rgba(17, 117, 248, 0.377);
+  transition: 0.8s ease;
+}
+.feature-list-box:hover {
+  color: black;
+  background-color: white;
 }
 .feature-icon i {
   font-size: 100px;
@@ -227,7 +247,15 @@
 }
 
 .gallery-img-con {
+  :first-child {
+    transform: rotateX(90deg);
+  }
   border-radius: 8px;
+}
+.gallery-img-con:hover {
+  :first-child {
+    transform: rotateX(0);
+  }
 }
 .img-detail {
   background-color: white;
@@ -235,14 +263,14 @@
   width: 90%;
   margin: auto;
   margin-top: 10%;
-  border-radius: 10px;
+  border-radius: 5px;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 1s ease;
-  /* transform: rotateX(90deg); */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.377);
 }
 
 .girl-one {
@@ -320,9 +348,140 @@ textarea::placeholder {
 }
 
 .form-btn button {
+  color: rgba(17, 117, 248, 0.637);
   padding: 6px 20px;
   position: relative;
   left: 90%;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
+  transition: 0.7s ease;
+  margin-top: 20px;
+}
+.form-btn button:hover {
+  background-color: rgba(17, 117, 248, 0.637);
+  color: white;
+}
+
+/* Menu */
+.menu-btns .fa {
+  background-color: white;
+  color: rgb(16, 104, 187);
+  font-size: 20px;
+  padding: 20px;
+  display: none;
+}
+.menu-btns .show-menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.menu-btns .close-menu {
+  width: 300px;
+  text-align: center;
+  z-index: 10;
+  position: fixed;
+  left: 0px;
+}
+
+.show-nav {
+  width: 300px;
+  left: 0px !important;
+}
+
+.hide-nav {
+  display: none;
+  width: 300px;
+  left: 0px !important;
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: initial !important;
+}
+
+@media screen and (width < 845px) and (width > 770px) {
+  .container {
+    width: 100%;
+    padding: 25px 50px;
+  }
+  .left-nav {
+    background-color: #007bff;
+    padding-top: 50px;
+    position: fixed;
+    left: -200px;
+  }
+  .menu-btns .show-menu {
+    display: initial;
+  }
+
+  .feature-list-box {
+    width: 48%;
+    padding: 60px;
+    background-color: rgba(17, 117, 248, 0.445);
+  }
+
+  .gallery-list {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .img-detail {
+    height: 500px;
+  }
+  .gallery-img-con {
+    background-size: cover;
+  }
+}
+
+@media screen and (width < 770px) {
+  .container {
+    width: 100%;
+    padding: 25px 70px;
+  }
+  .left-nav {
+    background-color: #007bff;
+    padding-top: 50px;
+    position: fixed;
+    left: -200px;
+  }
+  .menu-btns .show-menu {
+    display: initial;
+  }
+
+  .mountain-img-container,
+  .girl-nature-intro-cont {
+    flex-direction: column;
+  }
+  .mountain-img-container img,
+  .girl-nature-intro-cont img {
+    width: 100%;
+  }
+  .intro-img-container3 button {
+    margin-left: 0;
+  }
+
+  .feature-list-box {
+    width: 100%;
+    padding: 60px;
+    background-color: rgba(17, 117, 248, 0.445);
+  }
+
+  .gallery-list {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .img-detail {
+    height: 500px;
+  }
+  .gallery-img-con {
+    background-size: cover;
+  }
 }
