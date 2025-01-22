@@ -436,9 +436,12 @@ textarea::placeholder {
   .gallery-img-con {
     background-size: cover;
   }
+  .half-line {
+    width: 100%;
+  }
 }
 
-@media screen and (width < 770px) {
+@media screen and (width <= 770px) and (width > 400px) {
   .container {
     width: 100%;
     padding: 25px 70px;
@@ -472,7 +475,6 @@ textarea::placeholder {
   }
 
   .gallery-list {
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -483,5 +485,94 @@ textarea::placeholder {
   }
   .gallery-img-con {
     background-size: cover;
+  }
+  .half-line {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .left-nav {
+    width: 70%;
+    background-color: #007bff;
+    padding-top: 50px;
+    position: fixed;
+    left: -500px;
+  }
+  .menu-btns .close-menu {
+    width: 70%;
+  }
+
+  .menu-btns .show-menu {
+    display: initial;
+  }
+
+  .mountain-img-container,
+  .girl-nature-intro-cont {
+    flex-direction: column;
+  }
+  .mountain-img-container img,
+  .girl-nature-intro-cont img {
+    width: 100%;
+  }
+  .intro-img-container3 button {
+    margin-left: 0;
+  }
+
+  .feature-list-box {
+    width: 100%;
+    padding: 60px;
+    background-color: rgba(17, 117, 248, 0.445);
+  }
+
+  .gallery-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .img-detail {
+    height: 500px;
+  }
+  .gallery-img-con {
+    background-size: cover;
+  }
+
+  .contact-sec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 100px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-btn button {
+    color: rgba(17, 117, 248, 0.637);
+    padding: 4px 15px;
+    position: relative;
+    left: 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.7s ease;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  .half-line {
+    width: 100%;
+  }
+
+  .left-social a {
+    font-size: 1rem;
   }
 }
