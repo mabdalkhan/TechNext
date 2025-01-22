@@ -212,7 +212,7 @@
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between; */
-  gap: 16px;
+  gap: 0.5rem;
 }
 .feature-list-box {
   width: 49%;
